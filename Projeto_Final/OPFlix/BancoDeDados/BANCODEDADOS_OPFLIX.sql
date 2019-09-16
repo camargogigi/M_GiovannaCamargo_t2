@@ -131,3 +131,5 @@ join Lancamentos
 on Favoritos.IdLancamento = Lancamentos.IdLancamento
 join Usuarios
 on Favoritos.IdUsuario = Usuarios.IdUsuario
+
+delete from Favoritos

@@ -17,5 +17,9 @@ namespace Senai.OpFlix.WebApi.Interfaces
         void Atualizar(int id, Lancamentos lancamentos);
 
         void Deletar(int id);
+
+        List<Lancamentos> FiltrarPorPlataforma(string plataformas);
+
+        List<Lancamentos> FiltrarPorData(DateTime data);
     }
 }

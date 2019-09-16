@@ -23,7 +23,7 @@ namespace Senai.OpFlix.WebApi.Repositories
             {
                 return ctx.Lancamentos.FirstOrDefault(x => x.IdLancamento == id);
             }
-        }//fim buscar por id
+        }//fim buscar por id 
 
         public void Cadastrar(Lancamentos lancamentos)
         {
@@ -57,11 +57,26 @@ namespace Senai.OpFlix.WebApi.Repositories
         {
             using (OpFlixContext ctx = new OpFlixContext())
             {
-                Lancamentos LancamentoBuscado = ctx.Lancamentos.FirstOrDefault(x => x.IdLancamento == id);
+                Lancamentos LancamentoBuscado = ctx.Lancamentos.Find(id);
                 ctx.Lancamentos.Remove(LancamentoBuscado);
                 ctx.SaveChanges();
             }
-        }//fim deletar
+        }//fim delete
 
+        public List<Lancamentos> FiltrarPorPlataforma(string plataformas)
+        {
+            using (OpFlixContext ctx = new OpFlixContext())
+            {
+                return ctx.Lancamentos.Where(x => x.IdPlataformaNavigation.Nome == plataformas).ToList();
+            }
+        }//fim filtrar por plataforma
+
+        public List<Lancamentos> FiltrarPorData(DateTime data)
+        {
+            using (OpFlixContext ctx = new OpFlixContext())
+            {
+                return ctx.Lancamentos.Where(x => x.DataEstreia == data).ToList();
+            }
+        }//fim filtrar por data
     }
 }

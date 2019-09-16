@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.OpFlix.WebApi.Domains;
@@ -21,13 +22,26 @@ namespace Senai.OpFlix.WebApi.Controllers
             {
                 LancamentoRepository = new LancamentoRepository();
             }
-        
+
         [HttpGet]
         public IActionResult Listar()
         {
             return Ok(LancamentoRepository.Listar());
         }//fim listar
-        
+
+        [Authorize(Roles = "Administrador")]
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
+        {
+            Lancamentos lancamentos = LancamentoRepository.BuscarPorId(id);
+            if (lancamentos == null)
+            {
+                return NotFound();
+            }
+            return Ok(lancamentos);
+        }//fim buscar por id
+
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
         public IActionResult Cadastrar(Lancamentos lancamentos)
         {
@@ -41,7 +55,8 @@ namespace Senai.OpFlix.WebApi.Controllers
                 return BadRequest(new { mensagem = "IIIIIII deu ruim" + ex.Message });
             }
         }//fim cadastrar
-        
+
+        [Authorize(Roles = "Administrador")]
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Lancamentos lancamentos)
         {
@@ -60,25 +75,24 @@ namespace Senai.OpFlix.WebApi.Controllers
             }
         }//fim atualizar
 
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
-            try
-            {
-                Lancamentos LancamentoBuscado = LancamentoRepository.BuscarPorId(id);
+            LancamentoRepository.Deletar(id);
+            return Ok();
+        }//fim delete
 
-                if (LancamentoBuscado == null)
-                {
-                    return NotFound();
-                }
+        [HttpGet("plataforma/{plataformas}")]
+        public IActionResult FiltrarPorPlataforma(string plataformas)
+        {
+            return Ok(LancamentoRepository.FiltrarPorPlataforma(plataformas));
+        }//fim por plataforma
 
-                LancamentoRepository.Deletar(id);
-                return Ok();
-            }
-            catch (Exception)
-            {
-                return BadRequest();
-            }
-        }//fim deletar
+        [HttpGet("data/{datas}")]
+        public IActionResult FiltrarPorData(DateTime datas)
+        {
+            return Ok(LancamentoRepository.FiltrarPorData(datas));
+        }//fim por plataforma
     }
 }

@@ -11,7 +11,6 @@ namespace Senai.OpFlix.WebApi.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-
         public Usuarios BuscarPorEmailESenha(LoginViewModel login)
         {
             using (OpFlixContext ctx = new OpFlixContext())
@@ -23,6 +22,26 @@ namespace Senai.OpFlix.WebApi.Repositories
                 }
                 return UsuarioBuscado;
             }
-        }
+        }//fim buscar por email e senha
+
+        public List<Usuarios> Listar()
+        {
+            using (OpFlixContext ctx = new OpFlixContext())
+            {
+                return ctx.Usuarios.ToList();
+            }
+        }//fim listar
+
+        public void Cadastrar(Usuarios usuarios)
+        {
+            using (OpFlixContext ctx = new OpFlixContext())
+            {
+                //insert into
+                ctx.Usuarios.Add(usuarios);
+                ctx.SaveChanges();
+            }
+        }//fim cadastrar
+
+
     }
 }
