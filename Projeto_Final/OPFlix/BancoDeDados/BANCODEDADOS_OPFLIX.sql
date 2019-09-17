@@ -1,7 +1,7 @@
 CREATE DATABASE M_OpFlix
 USE M_OpFlix
 
---DDL
+--M_01_GiovannaCamargo_DDL;
 
 CREATE TABLE TiposUsuarios(
 	IdTipoUser INT PRIMARY KEY IDENTITY
@@ -46,7 +46,7 @@ CREATE TABLE Favoritos (
 
 
 
---DML
+--M_02_GiovannaCamargo_DML;
 
 INSERT INTO TiposUsuarios (Tipo)
 VALUES ('Administrador')
@@ -100,7 +100,7 @@ VALUES (3,2)
 	   ,(4,1);
 
 
---DQL
+--M_03_GiovannaCamargo_DQL;
 
 SELECT * FROM TiposUsuarios;
 SELECT * FROM Tipos;

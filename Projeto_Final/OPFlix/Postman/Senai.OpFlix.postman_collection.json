@@ -1,0 +1,646 @@
+{
+	"info": {
+		"_postman_id": "2d430179-7a00-48af-a75c-251f292d9f25",
+		"name": "Senai.OpFlix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "localhost:5000/api/categoria.Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/api/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/categoria.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Nacional\"\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/categoria/10.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"NOME\": \"Suspense\"\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/categoria/10",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categoria",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plataformas",
+			"item": [
+				{
+					"name": "localhost:5000/api/plataforma.Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/api/plataforma",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"plataforma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/plataforma.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Disney Plus\",\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/plataforma",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"plataforma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/plataforma/2.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Nome\":\"VS series\"\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/plataforma/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"plataforma",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "localhost:5000/api/login.Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"h@.com\",\n\t\"senha\": \"123659g8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lancamentos",
+			"item": [
+				{
+					"name": "localhost:5000/api/lancamento.Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/api/lancamento",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"lancamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/lancamento/4.BuscarPorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/lancamento/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"lancamento",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/lancamento/3.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Cinderela\",\n        \"dataEstreia\": \"2018-12-12T00:00:00\",\n        \"idTipo\": 1,\n        \"descricao\": \"Lily James é Ella neste Live Action de Cinderella\",\n        \"sinopse\": \"A órfã Ella precisa lidar com o péssimo tratamento que recebe da madrasta e das meia-irmãs, até que um encontro inesperado faz tudo mudar\\r\\n\",\n        \"idCategoria\": 12,\n        \"idPlataforma\": 2,\n        \"tempoDuracao\": \"1h47min\"\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/lancamento/3",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"lancamento",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/lancamento.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"O Rei Leão\",\n    \"dataEstreia\": \"2019-09-12T00:00:00\",\n    \"idTipo\": 1,\n    \"descricao\": \"Beyoncé dá a voz para Nala e assina a trilha sonora do Live Action\",\n    \"sinopse\": \"O leão Mufasa é o rei da floresta e teve um filho, o valente Simba. Agora é chegada a vez do pequeno herdar o trono de seu pai. No entanto, o tio do leãozinho, Scar, é corroído pela inveja e planeja impedir que Simba assuma o reinado.\",\n    \"idCategoria\": 12,\n    \"idPlataforma\": 4,\n    \"tempoDuracao\": \"118 min\"\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/lancamento",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"lancamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/lancamento/4.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/lancamento/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"lancamento",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/lancamento/data/2019-07-05T00:00:00.BuscarPorData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/lancamento/data/2019-07-05T00:00:00",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"lancamento",
+								"data",
+								"2019-07-05T00:00:00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/lancamento/plataforma/netflix.FiltrarPorPlataforma",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/lancamento/plataforma/disney plus",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"lancamento",
+								"plataforma",
+								"disney plus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "localhost:5000/api/usuario.Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/usuario/cadastrarUsuarioComum",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"Arthur\",\r\n        \"idTipoUser\": 2,\r\n        \"telefone\": \"964104270\",\r\n        \"cpf\": \"51729160832\",\r\n        \"senha\": \"123659g8\",\r\n        \"email\": \"arthur@.com\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/usuario/cadastrarUsuarioComum",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuario",
+								"cadastrarUsuarioComum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5000/api/usuario.CadastrarAdm ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhALmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNTY4NjQwNjY1LCJpc3MiOiJTZW5haS5PcEZsaXguV2ViQXBpIiwiYXVkIjoiU2VuYWkuT3BGbGl4LldlYkFwaSJ9.HLzJ591y7VNMyVY3Xsibh8XsaDCYHQOiMASDn1ZR1io",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"nome\": \"Raul\",\r\n        \"idTipoUser\": 1,\r\n        \"telefone\": \"986339791\",\r\n        \"cpf\": \"66191823532\",\r\n        \"senha\": \"123659g8\",\r\n        \"email\": \"raul@.com\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	]
+}
