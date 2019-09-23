@@ -12651,11 +12651,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\51729160832\\Documents\\M_Giovanna_Camargo\\M_Giovanna_Camargo\\Backend\\Sstop\\Senai.Sstop.WebApi\\Senai.Sstop.WebApi\\Senai.Sstop.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\51729160832\\Documents\\M_Giovanna_Camargo\\M_GiovannaCamargo_t2\\Backend\\Sstop\\Senai.Sstop.WebApi\\Senai.Sstop.WebApi\\Senai.Sstop.WebApi.csproj",
       "projectName": "Senai.Sstop.WebApi",
-      "projectPath": "C:\\Users\\51729160832\\Documents\\M_Giovanna_Camargo\\M_Giovanna_Camargo\\Backend\\Sstop\\Senai.Sstop.WebApi\\Senai.Sstop.WebApi\\Senai.Sstop.WebApi.csproj",
+      "projectPath": "C:\\Users\\51729160832\\Documents\\M_Giovanna_Camargo\\M_GiovannaCamargo_t2\\Backend\\Sstop\\Senai.Sstop.WebApi\\Senai.Sstop.WebApi\\Senai.Sstop.WebApi.csproj",
       "packagesPath": "C:\\Users\\51729160832\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\51729160832\\Documents\\M_Giovanna_Camargo\\M_Giovanna_Camargo\\Backend\\Sstop\\Senai.Sstop.WebApi\\Senai.Sstop.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\51729160832\\Documents\\M_Giovanna_Camargo\\M_GiovannaCamargo_t2\\Backend\\Sstop\\Senai.Sstop.WebApi\\Senai.Sstop.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
