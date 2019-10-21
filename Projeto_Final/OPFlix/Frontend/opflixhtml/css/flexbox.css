@@ -1,0 +1,50 @@
+.barraNavegacao .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.barraNavegacao .container{
+    display: flex;
+    align-content: space-between;
+    justify-content: right;
+}
+
+.barraNavegacao-nav {
+    display: flex;
+}
+
+.conteudo-imagem{
+    justify-content: baseline;
+}
+
+.informativo1{
+    display: flex;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .informativo2{
+    display: flex;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .informativo3{
+    display: flex;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .linha{
+      display: flex;
+      margin: 2.8%
+  }
+
+.rodapePrincipal-opflix .container {
+    display: flex;
+    justify-content: center;
+}
