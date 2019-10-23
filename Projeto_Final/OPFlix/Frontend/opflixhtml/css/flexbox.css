@@ -6,16 +6,21 @@
 
 .barraNavegacao .container{
     display: flex;
-    align-content: space-between;
-    justify-content: right;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
-.barraNavegacao-nav {
+nav{
+    width: 50%;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .conteudo-imagem{
-    justify-content: baseline;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .informativo1{
