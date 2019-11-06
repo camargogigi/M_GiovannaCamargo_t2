@@ -1,48 +1,18 @@
-.barraNavegacao .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.barraNavegacao .container{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-}
-
-nav{
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
 
 .conteudo-imagem{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
-.informativo1{
+.info {
     display: flex;
+    justify-content: space-around;
     max-width: 1360px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  .informativo2{
-    display: flex;
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .informativo3{
-    display: flex;
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+}
 
   .linha{
       display: flex;
@@ -51,5 +21,16 @@ nav{
 
 .rodapePrincipal-opflix .container {
     display: flex;
+    justify-content: center;
+}
+
+hgroup{
+    display: flex;
+    flex-direction: column;
+}
+
+#ta{
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
