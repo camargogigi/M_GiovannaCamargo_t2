@@ -16,7 +16,7 @@ class Login extends Component{
     }
 
     _efetuarLogin = async() =>{
-       fetch("http://192.168.3.204:5000/api/login", {
+       fetch("http://192.168.4.229:5000/api/login", {
          method: 'POST',
          headers: {
              'Accept': 'application/json',
@@ -46,18 +46,56 @@ _irMainPage = async(tokenRecebido) => {
     };
     render(){
         return(
-            <ImageBackground style={{width: '100%', height: '100%'}} source={require('../assets/img/background.jpg')}>
-                <View>
-                  <Image style={{width: '25%', height: '25%'}} source={require('../assets/img/logo.png')}/>
-                  <TextInput placeholder= 'Email' onChangeText={email => this.setState({email})}></TextInput>
-                  <TextInput placeholder= 'Senha' onChangeText={senha => this.setState({senha})}></TextInput>
-                  <TouchableOpacity onPress={this._efetuarLogin}>
-                    <Text>Login</Text>
+            <View style={{backgroundColor: '#160234', width: '100%', height: '100%', justifyContent: 'center', alignItems:'center'}}>
+                <View style={styles.campoLogin}>
+                <Image style={styles.logo} source={require('../assets/img/logo.png')}/>
+                  <TextInput placeholder= 'Email' placeholderTextColor='white' style={styles.input} onChangeText={email => this.setState({email})}></TextInput>
+                  <TextInput placeholder= 'Senha' placeholderTextColor='white' style={styles.input} onChangeText={senha => this.setState({senha})}></TextInput>
+                  <TouchableOpacity style={styles.botton} onPress={this._efetuarLogin}>
+                    <Text style={styles.text}>Entrar</Text>
                   </TouchableOpacity>
                 </View>
-            </ImageBackground>
+            </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+
+    campoLogin: {
+        backgroundColor: 'rgba(0, 0, 0, 0.685)', 
+        width:270, 
+        height: 400, 
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    input:{
+        color: 'white',
+        fontSize: 10,
+        width: 167,
+        height: 28,
+        backgroundColor: '#4D4949',
+        borderRadius: 6,
+        justifyContent: 'center'
+        
+    },
+    text:{
+        color: 'white',
+        fontSize: 10,
+    },
+    botton:{
+        backgroundColor:'#672B3F',
+        borderRadius: 6,
+        width: 167,
+        height: 28,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    logo:{
+        width: 217,
+        height: 70,
+         
+    }
+})
 
 export default Login

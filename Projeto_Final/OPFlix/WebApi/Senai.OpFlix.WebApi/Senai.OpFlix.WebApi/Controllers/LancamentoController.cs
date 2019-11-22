@@ -83,14 +83,14 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }//fim delete
 
-        [HttpGet("plataforma/{plataformas}")]
-        public IActionResult FiltrarPorPlataforma(string plataformas)
+        [HttpGet("categoria/{categoria}")]
+        public IActionResult FiltrarPorCategoria(int categoria)
         {
-            return Ok(LancamentoRepository.FiltrarPorPlataforma(plataformas));
+            return Ok(LancamentoRepository.FiltrarPorCategoria(categoria));
         }//fim por plataforma
 
         [HttpGet("data/{datas}")]
-        public IActionResult FiltrarPorData(DateTime datas)
+        public IActionResult FiltrarPorData(int datas)
         {
             return Ok(LancamentoRepository.FiltrarPorData(datas));
         }//fim por plataforma

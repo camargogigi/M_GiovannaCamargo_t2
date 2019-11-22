@@ -3,6 +3,7 @@ import{createStackNavigator} from 'react-navigation-stack'
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
 import LoginScreen from './pages/Login';
+import PrincipalScreen from './pages/Principal';
 import LancamentosScreen from './pages/Lancamentos';
 import BuscarCategoriaScreen from './pages/Categorias';
 import BuscarDataScreen from './pages/Data';
@@ -12,17 +13,36 @@ const AuthStack = createStackNavigator({
 });
 
 
-const MainNavigator = createBottomTabNavigator({
-  Lancamentos: {
-    screen: LancamentosScreen,
+const MainNavigator = createBottomTabNavigator(
+  {
+  
+  Início: {
+    screen: PrincipalScreen,
   },
-  BuscarCategoria: {
+  Lançamentos: {
+    screen: LancamentosScreen,  
+  },
+  Categorias: {
     screen: BuscarCategoriaScreen,
   },
-  BuscarData: {
+  Datas: {
     screen: BuscarDataScreen,
   },
-});
+},
+{
+    initialRouteName: 'Início',
+    tabBarOptions: {
+      showIcon: true,
+      showLabel: true, 
+      inactiveBackgroundColor: '#131313',
+      activeBackgroundColor: '##131312',
+      style: {
+        width: '100%',
+        height: 50,
+      },
+      },
+    },
+  );
 
 export default createAppContainer(createSwitchNavigator(
     {
