@@ -17,21 +17,47 @@ class Principal extends Component{
             <ScrollView>
             <View style={{backgroundColor: 'black'}}>
                 <View>
+                <View style={{alignItems: 'center'}}>
                 <Image style={{height:320, width:'100%'}} source={require('../assets/img/banner.png')}/>
-                <Text style={{fontSize: 10, color: '#ffff'}}>Teen ▪️ Musical ▪️ Realidade ▪️ Vida Real ▪️ Favela ▪️ Drogas</Text>
-                <Text style={{color: '#fff'}}>Lançamentos</Text>
-                <Image source={require('../assets/img/lancamentoscirculo.png')}/>
-                <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-                <Image style={{height:115, width:84}} source={require('../assets/img/desencanto.jpg')}/>
-                <Image style={{height:115, width:84}} source={require('../assets/img/cinquenta-cartaz-2.jpg')}/>
-                <Image style={{height:115, width:84}} source={require('../assets/img/fJXzwxCVr2TEkhhKRKcih9o5DYK.jpg')}/>
+                <Text style={{fontSize: 10, color: '#ffff', margin: 25}}>Teen ▪️ Musical ▪️ Realidade ▪️ Vida Real ▪️ Favela ▪️ Drogas</Text>
                 </View>
-                <Image style={{height:285, width:'100%'}} source={require('../assets/img/TheGoodPlace-S2-ShowImage-1920x1080-KO.jpg')}/>
+                <Text style={styles.titulos}>Lançamentos</Text>
+                <View style={{alignItems: 'center'}}>
+                <Image style={{margin: 25}} source={require('../assets/img/lancamentoscirculo.png')}/>
+                </View>
+                <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+                <Image style={styles.lancamentosRetangulos} source={require('../assets/img/desencanto.jpg')}/>
+                <Image style={styles.lancamentosRetangulos} source={require('../assets/img/cinquenta-cartaz-2.jpg')}/>
+                <Image style={styles.lancamentosRetangulos} source={require('../assets/img/fJXzwxCVr2TEkhhKRKcih9o5DYK.jpg')}/>
+                <Image style={styles.lancamentosRetangulos} source={require('../assets/img/how-to-get-away-with-murder-first-season.jpg')}/>
+                </View>
+                <Text style={{color: '#fff', fontSize: 14, marginTop:15, fontWeight: "bold"}}>Já disponível: 4 temporadas</Text>
+                <Image style={{height:250, width:'100%', marginVertical:15}} source={require('../assets/img/TheGoodPlace-S2-ShowImage-1920x1080-KO.jpg')}/>
+                </View>
+                <Text style={{color: '#fff', fontSize: 16, marginLeft:10, fontWeight: "bold"}}>Aclamados pela crítica</Text>
+                <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+                <Image style={styles.lancamentosRetangulos} source={require('../assets/img/Brooklyn.jpg')}/>
+                <Image style={styles.lancamentosRetangulos} source={require('../assets/img/sherlock.jpg')}/>
+                <Image style={styles.lancamentosRetangulos} source={require('../assets/img/lacasadepapel.jpg')}/>
+                <Image style={styles.lancamentosRetangulos} source={require('../assets/img/Breaking-Bad.jpg')}/>
                 </View>
             </View>
             </ScrollView>
         )
     }
 }
+
+const styles = StyleSheet.create({
+  titulos:{
+    color: '#fff', 
+    fontSize: 16, 
+    marginLeft: 25,
+    fontWeight: "bold"
+  },
+  lancamentosRetangulos:{
+    height:115, 
+    width:84
+  }
+})
 
 export default Principal

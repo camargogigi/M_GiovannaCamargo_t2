@@ -59,25 +59,23 @@ class Categorias extends Component{
             );
     };
 
-    _Logout = async (event) => {
-        await AsyncStorage.removeItem("@opflix:token");
-        this.props.navigation.navigate('AuthStack')
-    }
 
     render() {
         return (
             <ScrollView style={{backgroundColor: 'black'}}>
                 <View>
                     <View>
-                        <Image style={{height: 32, width:100}} source={require('../assets/img/logo.png')}/>
-                        <TouchableOpacity><Text style={{color: 'white'}} onPress={this._Logout}>Sair</Text></TouchableOpacity>
+                    <Image style={{height: 32, width:100, margin: 15}} source={require('../assets/img/logo.png')} />
+                    <View style={{alignItems: 'center'}}>
+                        <Text style={{color: '#fff', fontSize: 20, marginTop: 15 }}>Buscar Lancamento</Text>
+                        <Text style={{backgroundColor: '#C75E17', width: 190, height:5, borderRadius: 10}}></Text>
                     </View>
-                    <Text >Filtre os lançamentos por categorias</Text>
-                    <Picker 
+                    </View>
+                    <Picker style={{color:'#fff', fontSize:10 , backgroundColor:'#4D4949', width:155, height:30, borderRadius:30, margin:20 }}
                         selectedValue={this.state.categoriaEscolhida} 
                         onValueChange={(itemValue, itemIndex) => { 
                             this.setState({ categoriaEscolhida: itemValue })
-                            this._carregarLancamento(itemValue)}}>
+                            this._carregarLancamento(itemValue)}}> 
                         <Picker.item label="Categoria" value="" selectedValue />
                         {this.state.Categorias.map(e => {
                             return (<Picker.item label={e.nome} value={e.idCategoria} />
@@ -89,17 +87,19 @@ class Categorias extends Component{
                         ListEmptyComponent={this._listaVazia}
                         keyExtractor={item => item.idLancamento}
                         renderItem={({ item }) => (
-                            <View style={styles.div}>
-                            <Text style={styles.font}>Nome: {item.nome}</Text>
-                            <Text style={styles.font}>Data de estreia: {item.dataEstreia}</Text>
-                            <Text style={styles.font}>Tipo: {item.idTipoNavigation.nome}</Text>
-                            <Text style={styles.font}>Descrição: {item.descricao}</Text>
-                            <Text style={styles.font}>Sinopse: {item.sinopse}</Text>
-                            <Text style={styles.font}>Categoria: {item.idCategoriaNavigation.nome}</Text>
-                            <Text style={styles.font}>Tempo de duração:{item.tempoDuracao}</Text>
-                            <Text style={styles.font}>Plataforma disponível: {item.idPlataformaNavigation.nome}</Text>
-                            <Image style={styles.linhaDivisao} source={require('../assets/img/linhaCinzaDivisao.png')}/>
-                        </View>
+                            <View style={{margin: 10}}>
+                                    <Text style={styles.font}>Nome: {item.nome}</Text>
+                                    <Text style={styles.font}>Data de estreia: {item.dataEstreia}</Text>
+                                    <Text style={styles.font}>Tipo: {item.idTipoNavigation.nome}</Text>
+                                    <Text style={styles.font}>Descrição: {item.descricao}</Text>
+                                    <Text style={styles.font}>Sinopse: {item.sinopse}</Text>
+                                    <Text style={styles.font}>Categoria: {item.idCategoriaNavigation.nome}</Text>
+                                    <Text style={styles.font}>Tempo de duração:{item.tempoDuracao}</Text>
+                                    <Text style={styles.font}>Plataforma disponível: {item.idPlataformaNavigation.nome}</Text>
+                                    <View style={{alignItems: 'center'}}>
+                                    <Image style={styles.linhaDivisao} source={require('../assets/img/linhaCinzaDivisao.png')}/>
+                                    </View>  
+                                </View>
                         )} />
                 </View>
             </ScrollView>
@@ -110,14 +110,13 @@ class Categorias extends Component{
 const styles = StyleSheet.create({
     font:{
         color: 'white',
-        fontSize: 11,
+        fontSize: 12,
         marginLeft: 21
     },
     linhaDivisao:{
-        width: 305,
+        width: 400,
         height: 3,
-        marginTop: 21,
-        marginEnd: 21,
+        margin: 21
     },
 })
 

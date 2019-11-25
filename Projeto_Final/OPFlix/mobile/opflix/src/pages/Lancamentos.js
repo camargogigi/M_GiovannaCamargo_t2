@@ -47,13 +47,16 @@ class Lancamentos extends Component{
         return(
             <ScrollView>
             <View style={{backgroundColor: 'black'} }>
-                <Image style={{height: 32, width:100}} source={require('../assets/img/logo.png')} />
-                        <Text style={{color: '#fff'}}>lançamentos</Text>
+                <Image style={{height: 32, width:100, margin: 15}} source={require('../assets/img/logo.png')} />
+                    <View style={{alignItems: 'center'}}>
+                        <Text style={{color: '#fff', fontSize: 20, marginTop: 15 }}>Lançamentos</Text>
+                        <Text style={{backgroundColor: '#C75E17', width: 130, height:5, borderRadius: 10}}></Text>
+                    </View>
                         <FlatList
                             data={this.state.lancamentos}
                             keyExtractor={item => item.idLancamento}
                             renderItem={({ item }) => (
-                                <View >
+                                <View style={{margin: 10}}>
                                     <Text style={styles.font}>Nome: {item.nome}</Text>
                                     <Text style={styles.font}>Data de estreia: {item.dataEstreia}</Text>
                                     <Text style={styles.font}>Tipo: {item.idTipoNavigation.nome}</Text>
@@ -62,7 +65,9 @@ class Lancamentos extends Component{
                                     <Text style={styles.font}>Categoria: {item.idCategoriaNavigation.nome}</Text>
                                     <Text style={styles.font}>Tempo de duração:{item.tempoDuracao}</Text>
                                     <Text style={styles.font}>Plataforma disponível: {item.idPlataformaNavigation.nome}</Text>
+                                    <View style={{alignItems: 'center'}}>
                                     <Image style={styles.linhaDivisao} source={require('../assets/img/linhaCinzaDivisao.png')}/>
+                                    </View>  
                                 </View>
                             )}
                         />
@@ -75,14 +80,13 @@ class Lancamentos extends Component{
 const styles = StyleSheet.create({
     font:{
         color: 'white',
-        fontSize: 11,
+        fontSize: 12,
         marginLeft: 21
     },
     linhaDivisao:{
-        width: 305,
+        width: 400,
         height: 3,
-        marginTop: 21,
-        marginEnd: 21,
+        margin: 21
     },
 })
 

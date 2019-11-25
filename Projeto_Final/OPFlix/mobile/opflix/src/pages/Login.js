@@ -64,37 +64,38 @@ const styles = StyleSheet.create({
 
     campoLogin: {
         backgroundColor: 'rgba(0, 0, 0, 0.685)', 
-        width:270, 
-        height: 400, 
-        justifyContent: 'center',
+        width:300, 
+        height: 450, 
         alignItems: 'center'
     },
     input:{
         color: 'white',
-        fontSize: 10,
-        width: 167,
-        height: 28,
+        fontSize: 12,
+        width: 217,
+        height: 35,
         backgroundColor: '#4D4949',
         borderRadius: 6,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        margin: 7
         
     },
     text:{
         color: 'white',
-        fontSize: 10,
+        fontSize: 12,
     },
     botton:{
         backgroundColor:'#672B3F',
         borderRadius: 6,
-        width: 167,
-        height: 28,
+        width: 217,
+        height: 35,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        margin: 20
     },
     logo:{
-        width: 217,
+        width: 219,
         height: 70,
-         
+        margin: 35
     }
 })
 
