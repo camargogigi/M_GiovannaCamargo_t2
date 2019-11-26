@@ -15,6 +15,17 @@ class Login extends Component{
         };
     }
 
+    componentDidMount() {
+        this._verificacao()
+        console.disableYellowBox = true;
+    }
+    
+    _verificacao = async () => {
+        if(await AsyncStorage.getItem('@opflix:token') != null){
+            this.props.navigation.navigate('MainNavigator')
+        }
+    }
+
     _efetuarLogin = async() =>{
        fetch("http://192.168.4.229:5000/api/login", {
          method: 'POST',
@@ -46,15 +57,13 @@ _irMainPage = async(tokenRecebido) => {
     };
     render(){
         return(
-            <View style={{backgroundColor: '#160234', width: '100%', height: '100%', justifyContent: 'center', alignItems:'center'}}>
-                <View style={styles.campoLogin}>
+            <View style={{backgroundColor: 'black', width: '100%', height: '100%', justifyContent: 'center', alignItems:'center'}}>
                 <Image style={styles.logo} source={require('../assets/img/logo.png')}/>
                   <TextInput placeholder= 'Email' placeholderTextColor='white' style={styles.input} onChangeText={email => this.setState({email})}></TextInput>
-                  <TextInput placeholder= 'Senha' placeholderTextColor='white' style={styles.input} onChangeText={senha => this.setState({senha})}></TextInput>
+                  <TextInput placeholder= 'Senha' secureTextEntry={true} placeholderTextColor='white' style={styles.input} onChangeText={senha => this.setState({senha})}></TextInput>
                   <TouchableOpacity style={styles.botton} onPress={this._efetuarLogin}>
                     <Text style={styles.text}>Entrar</Text>
                   </TouchableOpacity>
-                </View>
             </View>
         );
     }
@@ -62,21 +71,15 @@ _irMainPage = async(tokenRecebido) => {
 
 const styles = StyleSheet.create({
 
-    campoLogin: {
-        backgroundColor: 'rgba(0, 0, 0, 0.685)', 
-        width:300, 
-        height: 450, 
-        alignItems: 'center'
-    },
+
     input:{
         color: 'white',
         fontSize: 12,
-        width: 217,
-        height: 35,
-        backgroundColor: '#4D4949',
-        borderRadius: 6,
         justifyContent: 'center',
-        margin: 7
+        margin: 15,
+        width: '60%',
+        height: 50,
+        borderBottomColor: "#ff0000"
         
     },
     text:{
@@ -86,16 +89,16 @@ const styles = StyleSheet.create({
     botton:{
         backgroundColor:'#672B3F',
         borderRadius: 6,
-        width: 217,
+        width: '60%',
         height: 35,
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 20
+        margin: 40
     },
     logo:{
         width: 219,
         height: 70,
-        margin: 35
+        margin: 40
     }
 })
 

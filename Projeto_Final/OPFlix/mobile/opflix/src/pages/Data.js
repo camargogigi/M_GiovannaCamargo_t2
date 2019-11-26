@@ -41,27 +41,24 @@ class Data extends Component{
             );
     };
 
-    _Logout = async (event) => {
-        await AsyncStorage.removeItem("@opflix:token");
-        this.props.navigation.navigate('AuthStack')
-    }
-
     render () {
         return (
             <ScrollView style={{backgroundColor: 'black'}}>
                 <View>
                 <View>
-                <Image style={{height: 32, width:100}} source={require('../assets/img/logo.png')} />
-                <TouchableOpacity><Text style={styles.Sair} onPress={this._Logout}>Sair</Text></TouchableOpacity>
+                    <Image style={{height: 32, width:100, margin: 15}} source={require('../assets/img/logo.png')} />
+                    <View style={{alignItems: 'center'}}>
+                        <Text style={{color: '#fff', fontSize: 20, marginTop: 15 }}>Buscar Lancamento</Text>
+                        <Text style={{backgroundColor: '#C75E17', width: 190, height:5, borderRadius: 10}}></Text>
                     </View>
-                    <Text style={styles.h1}>Busque os lançamentos de cada mês</Text>
-                    <Picker 
-                    style={styles.Picker} 
+                    </View>
+                    <View style={{flexDirection: 'row'}}>
+                    <Picker style={{color:'#fff', fontSize:10 , backgroundColor:'#4D4949', width:155, height:30, borderRadius:30, margin:20 }}
                     selectedValue={this.state.MesEscolhido} 
                     onValueChange={(itemValue, itemIndex) => { 
                         this.setState({ MesEscolhido: itemValue })
                         this._carregarLancamento(itemValue)}}>
-                        <Picker.item label="Escolha o mês desejado" value="" selectedValue/>
+                        <Picker.item label="Mês" value="" selectedValue/>
                         <Picker.item label="Janeiro" value="1"/>
                         <Picker.item label="Fevereiro" value="2"/>
                         <Picker.item label="Março" value="3"/>
@@ -75,6 +72,8 @@ class Data extends Component{
                         <Picker.item label="Novembro" value="11"/>
                         <Picker.item label="Dezembro" value="12"/>
                     </Picker>
+                    <Image style={{width: 25, height:25, marginTop: 23}} source={require('../assets/img/greysearch.png')}/>
+                    </View>
                     <FlatList style={styles.FlatList} data={this.state.Lancamentos} keyExtractor={item => item.idLancamento} ListEmptyComponent={this._listaVazia} renderItem={({item}) => (
                         <View style={styles.div}>
                             <Text style={styles.font}>Nome: {item.nome}</Text>
@@ -85,7 +84,9 @@ class Data extends Component{
                             <Text style={styles.font}>Categoria: {item.idCategoriaNavigation.nome}</Text>
                             <Text style={styles.font}>Tempo de duração:{item.tempoDuracao}</Text>
                             <Text style={styles.font}>Plataforma disponível: {item.idPlataformaNavigation.nome}</Text>
+                            <View style={{alignItems: "center"}}>
                             <Image style={styles.linhaDivisao} source={require('../assets/img/linhaCinzaDivisao.png')}/>
+                            </View>
                         </View>
                     )}
                     />
@@ -98,14 +99,13 @@ class Data extends Component{
 const styles = StyleSheet.create({
     font:{
         color: 'white',
-        fontSize: 11,
+        fontSize: 12,
         marginLeft: 21
     },
     linhaDivisao:{
-        width: 305,
+        width: 400,
         height: 3,
-        marginTop: 21,
-        marginEnd: 21,
+        margin: 21
     },
 })
 

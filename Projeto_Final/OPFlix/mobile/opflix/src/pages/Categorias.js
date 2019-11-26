@@ -71,7 +71,8 @@ class Categorias extends Component{
                         <Text style={{backgroundColor: '#C75E17', width: 190, height:5, borderRadius: 10}}></Text>
                     </View>
                     </View>
-                    <Picker style={{color:'#fff', fontSize:10 , backgroundColor:'#4D4949', width:155, height:30, borderRadius:30, margin:20 }}
+                    <View style={{flexDirection: 'row'}}>
+                      <Picker style={{color:'#fff', fontSize:10 , backgroundColor:'#4D4949', width:155, height:30, borderRadius:30, margin:20 }}
                         selectedValue={this.state.categoriaEscolhida} 
                         onValueChange={(itemValue, itemIndex) => { 
                             this.setState({ categoriaEscolhida: itemValue })
@@ -79,9 +80,11 @@ class Categorias extends Component{
                         <Picker.item label="Categoria" value="" selectedValue />
                         {this.state.Categorias.map(e => {
                             return (<Picker.item label={e.nome} value={e.idCategoria} />
-                            )
-                        })}
-                    </Picker>
+                                )
+                            })}
+                      </Picker>
+                      <Image style={{width: 25, height:25, marginTop: 23}} source={require('../assets/img/greysearch.png')}/>
+                    </View>
                     <FlatList
                         data={this.state.Lancamentos}
                         ListEmptyComponent={this._listaVazia}

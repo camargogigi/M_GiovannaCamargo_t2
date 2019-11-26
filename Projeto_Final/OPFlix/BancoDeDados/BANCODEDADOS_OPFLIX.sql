@@ -133,3 +133,6 @@ join Usuarios
 on Favoritos.IdUsuario = Usuarios.IdUsuario
 
 delete from Favoritos
+
+INSERT INTO Lancamentos(Nome, DataEstreia ,IdTipo ,Descricao ,Sinopse ,IdCategoria ,IdPlataforma ,TempoDuracao)
+VALUES('Brooklin Nine-Nine', '2013-09-13T00:00:00',2,'6 temporadas', 'Brooklyn Nine-Nine é uma série de televisão humorística americana criada por Dan Goor e Michael Schur, produzida e assinada pela NBC.', 4, 3, '20min/ep')
