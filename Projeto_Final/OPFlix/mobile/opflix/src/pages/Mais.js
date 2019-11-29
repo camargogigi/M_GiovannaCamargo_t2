@@ -21,9 +21,17 @@ class Mais extends Component{
     render(){
         return(
         <ScrollView style={{backgroundColor: '#000'}}>
+          <View>
+          <Image style={{height: 32, width:100, margin: 15}} source={require('../assets/img/logo.png')} />
+          <View style={{alignItems: 'center'}}>
+              <Text style={{color: '#fff', fontSize: 20, marginTop: 15 }}>Mais</Text>
+              <Text style={{backgroundColor: '#C75E17', width: 60, height:5, borderRadius: 10}}></Text>
+          </View>
+          </View>
             <View>
-            <TouchableOpacity><Text style={{color: 'white'}} onPress={this._Logout}>Sair</Text></TouchableOpacity>
+            <TouchableOpacity><Text style={{color: 'white', fontSize: 15, margin: 30 }} onPress={this._Logout}>Sair</Text></TouchableOpacity>
             </View>
+
         </ScrollView>
         )
     }
