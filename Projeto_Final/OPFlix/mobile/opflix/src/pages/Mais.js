@@ -29,7 +29,7 @@ class Mais extends Component{
           </View>
           </View>
             <View>
-            <TouchableOpacity><Text style={{color: 'white', fontSize: 15, margin: 30 }} onPress={this._Logout}>Sair</Text></TouchableOpacity>
+            <TouchableOpacity><Text style={{color: 'white', fontSize: 14, margin: 30 }} onPress={this._Logout}>Sair</Text></TouchableOpacity>
             </View>
 
         </ScrollView>

@@ -1,0 +1,36 @@
+
+.conteudo-imagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+  .linha{
+      display: flex;
+      margin: 2.8%
+  }
+
+.rodapePrincipal-opflix .container {
+    display: flex;
+    justify-content: center;
+}
+
+hgroup{
+    display: flex;
+    flex-direction: column;
+}
+
+#ta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

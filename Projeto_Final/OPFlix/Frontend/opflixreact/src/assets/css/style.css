@@ -1,0 +1,57 @@
+body {
+    background-color: black;
+    font-family: 'Bahnschrift', Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    width: 94%;
+    margin: 0 auto;
+}
+
+
+a {
+    text-decoration: none;
+  }
+  
+  .barraNavegacao-login {
+    width: 55px;
+    height: 25px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #672b3f;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.5s;
+    display: block;
+  }
+
+  .fa-header {
+    margin-left: 10px;
+  }
+
+  .conteudo-imagem{
+      background-image: url(../img/backgroundmuro.png);
+      height: 700px;
+  }
+  .conteudo-imagem img{
+    width: 500px;
+    height: 180px;
+  }
+
+  .conteudo-imagem h2{
+      font-size: 30px;
+  }
+
+  .conteudo-imagem button{
+      background-color: #672b3f;
+      border-radius: 5px;
+      color: #fff;
+      width: 300px;
+      height: 40px;
+  }
+
+  .rodapePrincipal-opflix .container {
+    color: #565656;
+    font-size: 15px;
+  }

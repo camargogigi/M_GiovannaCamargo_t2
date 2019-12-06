@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
 
     input:{
         color: 'white',
-        fontSize: 12,
+        fontSize: 14,
         justifyContent: 'center',
         margin: 15,
         width: '60%',
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     },
     text:{
         color: 'white',
-        fontSize: 12,
+        fontSize: 14,
     },
     botton:{
         backgroundColor:'#672B3F',

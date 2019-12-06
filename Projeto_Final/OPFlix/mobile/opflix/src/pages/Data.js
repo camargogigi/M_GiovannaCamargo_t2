@@ -99,7 +99,7 @@ class Data extends Component{
 const styles = StyleSheet.create({
     font:{
         color: 'white',
-        fontSize: 12,
+        fontSize: 14,
         marginLeft: 21
     },
     linhaDivisao:{

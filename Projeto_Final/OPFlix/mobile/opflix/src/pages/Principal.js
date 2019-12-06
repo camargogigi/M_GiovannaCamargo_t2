@@ -19,7 +19,7 @@ class Principal extends Component{
                 <View>
                 <View style={{alignItems: 'center'}}>
                 <Image style={{height:320, width:'100%'}} source={require('../assets/img/banner.png')}/>
-                <Text style={{fontSize: 10, color: '#ffff', margin: 25}}>Teen ▪️ Musical ▪️ Realidade ▪️ Vida Real ▪️ Favela ▪️ Drogas</Text>
+                <Text style={{fontSize: 13, color: '#ffff', margin: 25}}>Teen ▪️ Musical ▪️ Realidade ▪️ Favela ▪️ Drogas</Text>
                 </View>
                 <Text style={styles.titulos}>Lançamentos</Text>
                 <View style={{alignItems: 'center'}}>
