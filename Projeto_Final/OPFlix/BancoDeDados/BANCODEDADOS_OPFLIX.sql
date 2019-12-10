@@ -136,3 +136,6 @@ delete from Favoritos
 
 INSERT INTO Lancamentos(Nome, DataEstreia ,IdTipo ,Descricao ,Sinopse ,IdCategoria ,IdPlataforma ,TempoDuracao)
 VALUES('Brooklin Nine-Nine', '2013-09-13T00:00:00',2,'6 temporadas', 'Brooklyn Nine-Nine é uma série de televisão humorística americana criada por Dan Goor e Michael Schur, produzida e assinada pela NBC.', 4, 3, '20min/ep')
+
+INSERT INTO Usuarios (Nome, IdTipoUser, Telefone, CPF, Senha, Email)
+VALUES ('Helena Strada', 1, 997825259, 28528511, '132', 'helena@email.com')
