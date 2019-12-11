@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+
+.body{
+    background-color: black;
+    color: white;
+}
+
+.barraNavegacao{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 40px;
+    align-items: center
+}
+
+.barraNavegacao a{
+    margin-left : 30px;
+    margin-right : 20px;
+    background-color: #672b3f;
+    color: white;
+    border-radius: 10%;
+    font-size: 15px;
+    width: 50px;
+    height: 22px;
+    align-items: center;
+    text-align: center;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../img/backgroundmuro.png);
+    background-size: 100%;
+    height: 600px;
+}
+
+.banner img{
+    height: 150px;
+    width: 425px;
+    margin: 50px;
+}
+
+.banner a {
+    background-color: #672b3f;
+    color: white;
+    font-size: 13px;
+    width: 270px;
+    height: 20px;
+    text-align: center;
+    padding-top: 2px;
+    margin: 15px;
+}
+
+.picole{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.informativo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px;
+
+}
+
+.conteudo-principal{
+    align-items: center;
+}
+
+.linha{
+    width: 1300px;
+    margin-left: 50px;
+}
+
+.informativo p{
+    display:flex;
+    flex-direction: column;
+    font-size: 20px
+}
+.informativo h3{
+    display:flex;
+    flex-direction: column;
+    font-size: 25px
+}
+
+footer{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
