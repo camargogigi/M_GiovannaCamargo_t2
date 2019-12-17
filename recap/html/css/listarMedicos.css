@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI light', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    background-color: white;
+    color: black;
+}
+
+
+nav{
+    display: flex;
+    height: 57px;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+h1{
+    margin-left: 50%;
+}
+
+nav img{
+    height: 32px;
+    width: 158px;
+    margin-right: 500px
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+}
+
+.conteudo img{
+ width: 80%;
+}
